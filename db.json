@@ -1,0 +1,416 @@
+{
+  "users": [
+    {
+      "username": "Shivani Prajapati",
+      "email": "admin",
+      "password": "admin@123",
+      "id": 2
+    },
+    {
+      "username": "Setu ",
+      "email": "setu@gmail.com",
+      "password": "1234",
+      "id": 3,
+      "score.1": 7,
+      "score.2": 9,
+      "score.3": 7,
+      "totalScore": 23
+    },
+    {
+      "username": "Bob B",
+      "email": "bob@gmail.com",
+      "password": "1234",
+      "id": 4,
+      "score.1": 7,
+      "score.2": 10,
+      "score.3": 8,
+      "totalScore": 24
+    },
+    {
+      "username": "wonder women",
+      "email": "ww@gmail.com",
+      "password": "1234",
+      "id": 5,
+      "score.1": 8,
+      "score.2": 9,
+      "score.3": 9,
+      "totalScore": 25
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "HTML"
+    },
+    {
+      "id": 2,
+      "name": "Java"
+    },
+    {
+      "id": 3,
+      "name": "Angular"
+    }
+  ],
+  "questions": [
+    {
+      "subjectId": "1",
+      "text": "HTML stands for-",
+      "options": [
+        "HighText Machine Language",
+        "HyperText and links Markup Langusge",
+        "HyperText Markup Language",
+        "None of these"
+      ],
+      "answer": "HyperText Markup Language",
+      "id": 1
+    },
+    {
+      "subjectId": "1",
+      "text": "Which of the following element is responsible for making the text bold in HTML?",
+      "options": [
+        "<pre>",
+        "<a>",
+        "<b>",
+        "<br>"
+      ],
+      "answer": "<b>",
+      "id": 2
+    },
+    {
+      "subjectId": "1",
+      "text": "Which of the following tag is used for inserting the largest heading in HTML?",
+      "options": [
+        "<h3>",
+        "<h1>",
+        "<h5>",
+        "<h6>"
+      ],
+      "answer": "<h1>",
+      "id": 3
+    },
+    {
+      "subjectId": "1",
+      "text": "Which of the following tag is used to insert a line-break in HTML?",
+      "options": [
+        "<br>",
+        "<a>",
+        "<pre>",
+        "<b>"
+      ],
+      "answer": "<br>",
+      "id": 4
+    },
+    {
+      "subjectId": "1",
+      "text": "How to create an unordered list in HTML?",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<i>"
+      ],
+      "answer": "<ul>",
+      "id": 5
+    },
+    {
+      "subjectId": "1",
+      "text": "Which character is used to represent the closing of a tag in HTML?",
+      "options": [
+        "\\",
+        "!",
+        "/",
+        "."
+      ],
+      "answer": "/",
+      "id": 6
+    },
+    {
+      "subjectId": "1",
+      "text": "How to create a hyperlink in HTML?",
+      "options": [
+        "<a href = \"www.simplilearn.com\"> simplilearn.com </a>",
+        "<a url = \"www.simplilearn.com\" simplilearn.com /a>",
+        "<a link = \"www.simplilearn.com\"> simplilearn.com </a>",
+        "<a> www.simplilearn.com <simplilearn.com /a>"
+      ],
+      "answer": "<a href = \"www.simplilearn.com\"> simplilearn.com </a>",
+      "id": 7
+    },
+    {
+      "subjectId": "1",
+      "text": "How to insert an image in HTML?",
+      "options": [
+        "<img href = \"imgname.png\" />",
+        "<img url = \"imgname.png\" />",
+        "<img link = \"imgname.png\" />",
+        "<img src = \"imgname.png\" />"
+      ],
+      "answer": "<img src = \"imgname.png\" />",
+      "id": 8
+    },
+    {
+      "subjectId": "1",
+      "text": "<input> is :",
+      "options": [
+        "a format tag",
+        "an empty tag",
+        "All of the above",
+        "None of the above"
+      ],
+      "answer": "an empty tag",
+      "id": 9
+    },
+    {
+      "subjectId": "1",
+      "text": "Which of the following HTML tag is used to display the text with scrolling effect?",
+      "options": [
+        "<marquee>",
+        "<scroll>",
+        "<div>",
+        "None of the above"
+      ],
+      "answer": "<marquee>",
+      "id": 10
+    },
+    {
+      "subjectId": "2",
+      "text": "Which of the following option leads to the portability and security of Java?",
+      "options": [
+        "Bytecode is executed by JVM",
+        "The applet makes the Java code secure and portable",
+        "Use of exception handling",
+        "Dynamic binding between objects"
+      ],
+      "answer": "Bytecode is executed by JVM",
+      "id": 11
+    },
+    {
+      "subjectId": "2",
+      "text": "Which of the following is not a Java features?",
+      "options": [
+        "Dynamic",
+        "Architecture Neutral",
+        "Use of pointers",
+        "Object-oriented"
+      ],
+      "answer": "Use of pointers",
+      "id": 12
+    },
+    {
+      "subjectId": "2",
+      "text": " The \\u0021 article referred to as a -",
+      "options": [
+        "Unicode escape sequence",
+        "Octal escape",
+        "Hexadecimal",
+        "Line feed"
+      ],
+      "answer": "Unicode escape sequence",
+      "id": 13
+    },
+    {
+      "subjectId": "2",
+      "text": "_____ is used to find and fix bugs in the Java programs.",
+      "options": [
+        "JVM",
+        "JRE",
+        "JDK",
+        "JDB"
+      ],
+      "answer": "JDB",
+      "id": 14
+    },
+    {
+      "subjectId": "2",
+      "text": "Which of the following is a valid declaration of a char?",
+      "options": [
+        "char ch = '\\utea';",
+        "char ca = 'tea';",
+        "char cr = \\u0223;",
+        "char cc = '\\itea';"
+      ],
+      "answer": "char ch = '\\utea';",
+      "id": 15
+    },
+    {
+      "subjectId": "2",
+      "text": "What is the return type of the hashCode() method in the Object class?",
+      "options": [
+        "Object",
+        "int",
+        "long",
+        "void"
+      ],
+      "answer": "int",
+      "id": 16
+    },
+    {
+      "subjectId": "2",
+      "text": "What does the expression float a = 35 / 0 return?",
+      "options": [
+        "0",
+        "Not a Number",
+        "Infinity",
+        "Run Time exception"
+      ],
+      "answer": "Infinity",
+      "id": 17
+    },
+    {
+      "subjectId": "2",
+      "text": "In which process, a local variable has the same name as one of the instance variables?",
+      "options": [
+        "Serialization",
+        "Variable Shadowing",
+        "Abstraction",
+        "Multi-threading"
+      ],
+      "answer": "Variable Shadowing",
+      "id": 18
+    },
+    {
+      "subjectId": "2",
+      "text": " Which of the following is true about the anonymous inner class?",
+      "options": [
+        "It has only methods",
+        "Objects can't be created",
+        "It has a fixed class name",
+        "It has no class name"
+      ],
+      "answer": "It has no class name",
+      "id": 19
+    },
+    {
+      "subjectId": "2",
+      "text": "An interface with no fields or methods is known as a ______.",
+      "options": [
+        "Runnable Interface",
+        "Marker Interface",
+        "Abstract Interface",
+        "CharSequence Interface"
+      ],
+      "answer": "Marker Interface",
+      "id": 20
+    },
+    {
+      "subjectId": "3",
+      "text": "Which of the following statement is correct for AngularJS ?",
+      "options": [
+        "AngularJS is an HTML framework",
+        "AngularJS is a Java framework",
+        "AngularJS is a JavaScript framework",
+        "AngularJS is a SQL framework"
+      ],
+      "answer": "AngularJS is a JavaScript framework",
+      "id": 21
+    },
+    {
+      "subjectId": "3",
+      "text": "On which of the Architectural pattern AngularJS is based?",
+      "options": [
+        "Observer Pattern",
+        "Decorator Pattern",
+        "MVC Architecture Pattern",
+        "MVVM Architectural Pattern"
+      ],
+      "answer": "MVVM Architectural Pattern",
+      "id": 22
+    },
+    {
+      "subjectId": "3",
+      "text": "AngularJS is perfect for?",
+      "options": [
+        "SPAs",
+        "MPAs",
+        "DPAs",
+        "CPAs"
+      ],
+      "answer": "SPAs",
+      "id": 23
+    },
+    {
+      "subjectId": "3",
+      "text": "Which of the following directive is used to bind the application data to the HTML view in AngularJS?",
+      "options": [
+        "ng-app directive",
+        "ng-model directive",
+        "ng-bind directive",
+        "ng-init directive"
+      ],
+      "answer": "ng-bind directive",
+      "id": 24
+    },
+    {
+      "subjectId": "3",
+      "text": " Which of the following is used to share data between controller and view in AngularJS?",
+      "options": [
+        "using Model",
+        "using services",
+        "using factory",
+        "using $scope"
+      ],
+      "answer": "using services",
+      "id": 25
+    },
+    {
+      "subjectId": "3",
+      "text": "Which of the following is not a valid AngularJS filter?",
+      "options": [
+        "lowercase",
+        "orderby",
+        "email",
+        "currency"
+      ],
+      "answer": "email",
+      "id": 26
+    },
+    {
+      "subjectId": "3",
+      "text": "Who is known as the father of AngularJS?",
+      "options": [
+        "Brad Green",
+        "Misko Hevery",
+        "Adam Abrons",
+        "Mike Adams"
+      ],
+      "answer": "Misko Hevery",
+      "id": 27
+    },
+    {
+      "subjectId": "3",
+      "text": "Which of the following community Angular JS belong to?",
+      "options": [
+        "Twitter",
+        "Facebook",
+        "Google",
+        "Microsoft"
+      ],
+      "answer": "Google",
+      "id": 28
+    },
+    {
+      "subjectId": "3",
+      "text": "Which of the following directive is used to bind the value of HTML controls to application data?",
+      "options": [
+        "ng-app",
+        "ng-init",
+        "ng-model",
+        "ng-hide"
+      ],
+      "answer": "ng-model",
+      "id": 29
+    },
+    {
+      "subjectId": "3",
+      "text": "AngularJS applications are a mix of which of the following technologies?",
+      "options": [
+        "HTML and PHP",
+        "HTML and JavaScript",
+        "HTML and TypeScript",
+        "PHP and JavaScript"
+      ],
+      "answer": "HTML and JavaScript",
+      "id": 30
+    }
+  ]
+}

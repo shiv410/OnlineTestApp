@@ -1,0 +1,48 @@
+<br>
+<br>
+
+<div class="container">
+    <h2>Welcome to the quiz</h2>
+</div>
+
+<div class="container">
+    <br>
+    <div class="row" style="justify-content: center;">
+        <div class="col-sm-5">
+            <div class="card border-dark" style="height:22rem">
+                <div class="card-body text-white" style="background-color: rgb(15,16,86);">
+                    <p>Read the instructions first:</p>
+                    <ol>
+                        <li>Begin the quiz at the designated time to ensure you have ample time to answer all questions
+                        </li>
+                        <li>Each of the 30 questions carries a value of one mark. Ensure to answer to the best of your
+                            ability.</li>
+                        <li>There is no penalty for incorrect answers, so attempt all questions without fear of
+                            deductions.</li>
+                        <li>Only one response is allowed per question. Once you've chosen an answer, it cannot be
+                            modified.</li>
+                        <li>After answering all questions, click the 'Submit' button. Ensure to submit your quiz before
+                            the allotted time ends.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-5">
+            <div class="card border-dark" style="height:22rem">
+                <div class="card-body text-white" style="background-color: rgb(15,16,86);">
+                    <h4>Subjects</h4>
+                    <p>Choose a subject</p>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let subject of subjects">
+                            <b><a [routerLink]="['/quiz', subject.id]" class="list-group-item list-group-item-action">{{
+                                    subject.name }}</a></b>
+                            &nbsp;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

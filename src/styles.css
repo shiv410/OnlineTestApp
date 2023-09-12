@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    /* font-size: 14px; */
+    font-family: monospace;
+    background-color: #C1DAD6;
+    /* background-color:  #9A616D; */
+}
+
+
+.logout {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.logout .logouttext {
+    visibility: hidden;
+    width: 120px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.logout:hover .logouttext {
+    visibility: visible;
+}

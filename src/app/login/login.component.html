@@ -1,0 +1,51 @@
+<!-- <br> -->
+
+<!-- <section class="" style="background-color: #9A616D;"> -->
+<div class="container">
+    <!-- <div class="row d-flex justify-content-center align-items-center h-100"> -->
+
+    <br>
+    <br>
+    <div class="card col-md-4 m-auto" style="border-radius: 1rem;">
+
+        <!-- <div class="col-md-6 col-lg-7 d-flex align-items-center"> -->
+        <div class="card-body p-4 p-lg-4 text-black">
+
+            <form (ngSubmit)="login()">
+
+                <div class="d-flex align-items-center mb-1 pb-2">
+                    <h4 class="fw-bold">Online Quiz Application</h4>
+                </div>
+
+                <h6 class="fw-normal mb-3 pb-2" style="letter-spacing: 1px;">Sign into your account
+                </h6>
+
+                <div class="form-outline mb-4">
+                    <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control"
+                        placeholder="Email" />
+                    <!-- <label class="form-label" for="form2Example17">Email </label> -->
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control"
+                        placeholder="Password" />
+                    <!-- <label class="form-label" for="form2Example27">Password</label> -->
+                </div>
+
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-dark btn-block" type="submit">Login</button>
+                </div>
+
+                <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?
+                    <a routerLink="/register" style="color: #393f81;">Register here</a>
+                </p>
+
+            </form>
+
+            <div *ngIf="error">{{ error }}</div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+<!-- </div> -->
+<!-- </section> -->

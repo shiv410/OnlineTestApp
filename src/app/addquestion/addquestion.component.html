@@ -1,0 +1,50 @@
+<br>
+<div class="row">
+    <div class="col-md-7 m-auto">
+        <div class="card">
+            <!-- <br> -->
+            <div class="card-header text-center">
+                <h4>Add new Question here</h4>
+            </div>
+            <div class="card-body border-dark">
+                <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+                    <div class="col-md-6">
+                        Select Subject:
+                        <select class="form-select form-select-sm" formControlName="subjectId">
+                            <option selected disabled>Select Subject</option>
+                            <option *ngFor="let subject of subjects" [value]="subject.id">
+                                {{ subject.name }}
+                            </option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <input class="form-control form-control-sm" type="text" formControlName="text"
+                            placeholder="Enter Question here">
+                    </div>
+
+                    <br>
+                    <div class="row" formArrayName="options">
+                        <div class="col-md-6" *ngFor="let option of options.controls; let i = index">
+                            <input class="form-control form-control-sm" type="text" [formControlName]="i"
+                                placeholder="Option {{ i + 1 }}"> &nbsp;
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <input class="form-control form-control-sm" type="text" formControlName="answer"
+                            placeholder="Write Correct Answer here">
+                    </div>
+
+                    <br>
+                    <button class="btn btn-dark" type="submit">Add Question</button>
+                    &nbsp;
+                    <button class="btn btn-dark" type="reset">&nbsp; Reset &nbsp; </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

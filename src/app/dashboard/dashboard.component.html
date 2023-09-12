@@ -1,0 +1,46 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="col-sm-5 m-auto">
+        <div class="card">
+            <div class="card-body" style="background-color: rgb(15,16,86);">
+                <div class="card-body" style="background-color: white;height:20rem;">
+
+                    <div *ngIf="userData">
+
+                        <h4 class="card-title text-center fw-bold" style="color: purple;">
+                            <span style='font-size:30px;'>&#9997;</span>
+                            Score Card for {{ userData.username }}
+                            <span style='font-size:30px;'>&#9997;</span>
+                        </h4>
+                        <hr style="height: 1px;">
+
+                        <div class="text-center fs-5">
+                            <div>
+                                <strong> HTML :</strong> {{ userData['score.1'] }} out of 10
+                            </div>
+                            <br>
+                            <div>
+                                <strong> Java :</strong> {{ userData['score.2'] }} out of 10
+                            </div>
+                            <br>
+                            <div>
+                                <strong> Angular :</strong> {{ userData['score.3'] }} out of 10
+                            </div>
+                            <hr>
+                            <div>
+                                <strong>Total Score:</strong> {{ userData.totalScore }} out of 30
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

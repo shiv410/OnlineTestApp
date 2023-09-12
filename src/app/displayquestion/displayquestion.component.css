@@ -1,0 +1,31 @@
+.btn {
+    border-radius: 10px;
+    padding: 8px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.quiz-container {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.options {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.next {
+    float: right;
+}

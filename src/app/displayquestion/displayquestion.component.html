@@ -1,0 +1,240 @@
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="!authService.currentUserValue">
+    Login first!
+</div>
+
+
+<div *ngIf="authService.currentUserValue">
+    <!-- your quiz code here -->
+
+    <div class="container">
+        <div class="col-sm-6 m-auto quiz-container">
+            <div>
+                <div class="card-body" *ngIf="questions.length > 0">
+
+                    <h5 class="card-title question">Q. {{
+                        questions[currentQuestionIndex].text }}</h5>
+                    <form [formGroup]="quizForm">
+
+                        <ul class="list-group"
+                            *ngFor="let option of questions[currentQuestionIndex]?.options; let idx = index">
+
+                            <li class="list-group-item options">
+                                <input class="form-check-input me-1" type="radio" [value]="option"
+                                    formControlName="answer">
+                                <label class="form-check-label">
+                                    {{ option }}
+                                </label>
+                                &nbsp;
+                            </li>
+
+                        </ul>
+
+                        <br>
+
+                        <button class="btn btn-sm btn-dark" (click)="previousQuestion()" type="button"
+                            [disabled]="currentQuestionIndex == 0">Previous</button>
+                        &nbsp;
+                        <button class="btn btn-sm btn-dark next" (click)="nextQuestion()" type="button"
+                            [disabled]="currentQuestionIndex == questions.length - 1">Next</button>
+                        <!-- <button (click)="resetQuiz()" type="button">Reset</button> -->
+
+                        <br>
+                        <br>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-sm btn-success btn-block text-center" (click)="submitQuiz()"
+                                type="button" *ngIf="currentQuestionIndex == questions.length - 1">Submit</button>
+                        </div>
+
+                        <!-- <div *ngIf="isQuizSubmitted">
+                            Quiz completed! Your score for this quiz is: {{ userScore }}
+                            Your total score for all quizzes is: {{ totalScore }}
+                        </div> -->
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h4>Subjects</h4>
+<ul>
+    <li *ngFor="let subject of subjects" (click)="startQuiz(subject.id)">
+        {{ subject.name }}
+    </li>
+</ul> -->
+
+<!-- Quiz section -->
+<!-- <form [formGroup]="quizForm" *ngIf="selectedSubject && !isQuizFinished" (ngSubmit)="submitQuiz()">
+    <div *ngFor="let question of questions">
+        <h4>{{ question.text }}</h4>
+        <div *ngFor="let option of question.options; let idx = index">
+            <input type="radio" [value]="option" [attr.name]="question.id" formControlName="{{question.id}}">
+            {{ option }}
+        </div> -->
+<!-- <ul>
+            <li *ngFor="let option of question.options; let idx = index">
+                <input type="radio" [value]="option" [name]="question.id" formControlName="{{question.id}}">
+                {{ option }}
+            </li>
+        </ul> -->
+<!-- </div>
+
+    <button (click)="previousQuestion()" type="button" [disabled]="currentQuestionIndex == 0">Previous</button>
+    <button (click)="nextQuestion()" type="button"
+        [disabled]="currentQuestionIndex == questions.length - 1">Next</button>
+    <button (click)="resetQuiz()" type="button">Reset</button>
+    <button type="submit">Submit Quiz</button>
+</form>
+
+<div *ngIf="isQuizFinished">
+    Quiz is finished! Your score is: {{ userScore }} out of {{ questions.length }}
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+
+    <div *ngIf="questions">
+        <p>Questions array exists</p>
+
+        <div *ngIf="questions.length > 0">
+            <p>Questions array has data!</p>
+
+            <h4>{{ questions[currentQuestionIndex]!.text }}</h4>
+
+
+            <div *ngFor="let option of questions[currentQuestionIndex]?.options">
+                <input type="radio" name="currentQuestion" [value]="option"
+                    [(ngModel)]="userAnswers[currentQuestionIndex]">
+                {{ option }}
+            </div>
+        </div>
+    </div>    
+
+    <div>
+        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+        &nbsp;
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+        &nbsp;
+        <button (click)="reloadQuestion()">Reload</button>
+        &nbsp;
+        <button (click)="onSubmit()">Submit</button>
+    </div>   
+
+</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="currentQuestionIndex < questions.length"> -->
+<!-- <div *ngIf="currentQuestionIndex < questions.length; else resultTemplate"> -->
+<!-- <h2>{{ questions[currentQuestionIndex].text }}</h2>
+
+    <div *ngFor="let option of questions[currentQuestionIndex].options; let idx = index">
+        <input type="radio" [(ngModel)]="userAnswers[currentQuestionIndex]" [value]="idx" name="question"> {{ option }}
+    </div>
+
+    <button (click)="moveToPreviousQuestion()" [disabled]="currentQuestionIndex == 0">Previous</button>
+    <button (click)="moveToNextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+    <button (click)="reloadQuiz()">Reload</button>
+    <button (click)="submitQuiz()">Submit</button>
+</div> -->
+
+<!-- <ng-template #resultTemplate>
+    <h2>Your Score: {{ score }}/{{ questions.length }}</h2>
+</ng-template> -->
+
+
+
+
+
+
+<!-- Wrap the entire form with the formGroup directive
+<form [formGroup]="quizForm">
+
+    <div *ngIf="currentQuestionIndex < questions.length; else resultTemplate">
+
+        <h3>Q. {{ questions[currentQuestionIndex]?.text }}</h3>
+
+        <div *ngFor="let option of questions[currentQuestionIndex]?.options; let idx = index">
+            <input type="radio" [value]="idx" name="question{{currentQuestionIndex}}"
+                [formControlName]="'question' + currentQuestionIndex">
+            {{ option }}
+        </div>
+
+        <button (click)="moveToPreviousQuestion()" [disabled]="currentQuestionIndex == 0">Previous</button>
+        <button (click)="moveToNextQuestion()">Next</button>
+        <button (click)="reloadQuiz()">Reload</button>
+        <button (click)="submitQuiz()">Submit</button>
+
+    </div>
+
+</form>
+
+<ng-template #resultTemplate>
+    <h2>Your Score: {{ score }}/{{ questions.length }}</h2>
+</ng-template> -->

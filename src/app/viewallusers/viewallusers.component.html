@@ -1,0 +1,46 @@
+<br>
+<div class="row">
+    <div class="col-md-10 m-auto">
+        <div class="card">
+            <div class="text-center text-light p-2" style="background-color: rgb(15,16,86);">
+                <h5>All Registered Users Details</h5>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-bordered table-stripped text-center table-sm">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>User Id</th>
+                            <th>User Name</th>
+                            <th>User Email</th>
+                            <th>Password</th>
+                            <th>Score</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let user of userinfo | async">
+                            <td>{{user?.id}}</td>
+                            <td>{{user?.username}}</td>
+                            <td>{{user?.email}}</td>
+                            <td>{{user?.password}}</td>
+                            <td>{{user?.totalScore}}</td>
+                            <td>
+                                <input type="button" value=" View " class="btn btn-warning"
+                                    style="--bs-btn-padding-y: .12rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: .80rem;">
+
+                                &nbsp;
+
+                                <input type="button" value="Delete" class="btn btn-danger"
+                                    style="--bs-btn-padding-y: .12rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: .80rem;"
+                                    (click)="delUser(user.id)">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
